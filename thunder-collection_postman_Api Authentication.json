@@ -1,0 +1,162 @@
+{
+    "info": {
+        "_postman_id": "e241e2be-2383-4ffe-a54f-a9d1f1b54954",
+        "name": "Api Authentication",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+        "description": ""
+    },
+    "item": [
+        {
+            "name": "login",
+            "request": {
+                "method": "POST",
+                "url": {
+                    "raw": "http://127.0.0.1:8000/api/login?email=kholoud1@gmail.com&password=123456789",
+                    "query": [
+                        {
+                            "key": "email",
+                            "value": "kholoud1@gmail.com"
+                        },
+                        {
+                            "key": "password",
+                            "value": "123456789"
+                        }
+                    ],
+                    "variable": [],
+                    "path": [
+                        "api",
+                        "login"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "127",
+                        "0",
+                        "0",
+                        "1"
+                    ],
+                    "port": "8000"
+                }
+            }
+        },
+        {
+            "name": "user",
+            "request": {
+                "method": "GET",
+                "url": {
+                    "raw": "http://127.0.0.1:8000/api/user",
+                    "path": [
+                        "api",
+                        "user"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "127",
+                        "0",
+                        "0",
+                        "1"
+                    ],
+                    "port": "8000"
+                },
+                "header": [
+                    {
+                        "key": "Accept",
+                        "value": "application/json"
+                    }
+                ],
+                "auth": {
+                    "type": "bearer",
+                    "bearer": [
+                        {
+                            "key": "token",
+                            "value": "1|KhN6qPhzGcpvU9PaVq8HFIrTcVnrszDI7EyP6FGW4f4b9ed7",
+                            "type": "string"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "name": "register",
+            "request": {
+                "method": "POST",
+                "url": {
+                    "raw": "http://127.0.0.1:8000/api/register?name=kholoud&email=kholoud1@gmail.com&password=123456789&password_confirmation=123456789",
+                    "query": [
+                        {
+                            "key": "name",
+                            "value": "kholoud"
+                        },
+                        {
+                            "key": "email",
+                            "value": "kholoud1@gmail.com"
+                        },
+                        {
+                            "key": "password",
+                            "value": "123456789"
+                        },
+                        {
+                            "key": "password_confirmation",
+                            "value": "123456789"
+                        }
+                    ],
+                    "variable": [],
+                    "path": [
+                        "api",
+                        "register"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "127",
+                        "0",
+                        "0",
+                        "1"
+                    ],
+                    "port": "8000"
+                },
+                "header": [
+                    {
+                        "key": "Accept",
+                        "value": "application/json"
+                    }
+                ]
+            }
+        },
+        {
+            "name": "logout",
+            "request": {
+                "method": "POST",
+                "url": {
+                    "raw": "http://127.0.0.1:8000/api/logout",
+                    "path": [
+                        "api",
+                        "logout"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "127",
+                        "0",
+                        "0",
+                        "1"
+                    ],
+                    "port": "8000"
+                },
+                "header": [
+                    {
+                        "key": "Accept",
+                        "value": "application/json"
+                    }
+                ],
+                "auth": {
+                    "type": "bearer",
+                    "bearer": [
+                        {
+                            "key": "token",
+                            "value": "1|KhN6qPhzGcpvU9PaVq8HFIrTcVnrszDI7EyP6FGW4f4b9ed7",
+                            "type": "string"
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}
